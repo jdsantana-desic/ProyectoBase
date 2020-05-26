@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+					xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					x:Class="ProyectoBase.Styles.DefaultStyle">
+
+	<!-- ===============================================================================================================
+		En el fichero app.xaml del proyecto correspondiente, añadir lo siguiente en la etiqueta <Application.Resources>
+	
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/Styles/DefaultStyle.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	==================================================================================================================== -->
+
+	<!-- Implicit Styles -->
+	<Style TargetType="Label" BaseResourceKey="BodyStyle">
+		<Setter Property="HorizontalOptions" Value="StartAndExpand" />
+		<Setter Property="FontSize" Value="Medium" />
+		<Setter Property="TextColor" Value="#AF3800" />
+	</Style>
+	<Style TargetType="Entry">
+		<Setter Property="HorizontalOptions" Value="Fill" />
+		<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+		<Setter Property="TextColor" Value="#AF3800" />
+	</Style>
+	<Style TargetType="Button">
+		<Setter Property="HorizontalOptions" Value="Fill" />
+		<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+		<Setter Property="BorderRadius" Value="15" />
+		<Setter Property="BackgroundColor" Value="#AF3800" />
+		<Setter Property="TextColor" Value="White" />
+		<Setter Property="FontSize" Value="Medium" />
+	</Style>
+	<Style TargetType="Switch">
+		<Setter Property="HorizontalOptions" Value="Start" />
+		<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+		<Setter Property="BackgroundColor" Value="White" />
+	</Style>
+
+	<!-- Explicit Styles - a Key is Added - Must be referred by Style="{DynamicResource MainStackLayout}" -->
+	<Style x:Key="MainStackLayout" TargetType="StackLayout" >
+		<Setter Property="Padding">
+			<Setter.Value>
+				<OnPlatform x:TypeArguments="Thickness" Android="8, 8, 8, 8" iOS="10, 10, 10, 10"/>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="VerticalOptions" Value="StartAndExpand" />
+		<Setter Property="Spacing" Value="5" />
+	</Style>
+	<Style TargetType="Label" x:Key="LabelPageHeading">
+		<Setter Property="HorizontalOptions" Value="Center" />
+		<Setter Property="FontSize" Value="Large" />
+		<Setter Property="TextColor" Value="#AF3800" />
+	</Style>
+	<Style TargetType="Label" BaseResourceKey="SubtitleStyle" x:Key="LabelSubHeading">
+		<Setter Property="HorizontalOptions" Value="Center" />
+		<Setter Property="FontSize" Value="Medium" />
+		<Setter Property="TextColor" Value="#AF3800" />
+	</Style>
+	<Style TargetType="Button" x:Key="ButtonSecondary">
+		<Setter Property="HorizontalOptions" Value="Fill" />
+		<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+		<Setter Property="BorderRadius" Value="15" />
+		<Setter Property="BackgroundColor" Value="#aa2029" />
+		<Setter Property="TextColor" Value="White" />
+		<Setter Property="FontSize" Value="Medium"/>
+	</Style>
+
+	<Style TargetType="Button" x:Key="GreenButton">
+		<Setter Property="BackgroundColor" Value="Green" />
+	</Style>
+	
+</ResourceDictionary>
